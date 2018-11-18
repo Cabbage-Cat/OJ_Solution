@@ -12,15 +12,15 @@ int N,S;
 
 int main()
 {
-    // freopen("F:\\github\\OJ_Solution\\POJ2393\\file.in","r",stdin);
-    // freopen("F:\\github\\OJ_Solution\\POJ2393\\file.out","w",stdout);
+    freopen("F:\\github\\OJ_Solution\\POJ2393\\file.in","r",stdin);
+    freopen("F:\\github\\OJ_Solution\\POJ2393\\file.out","w",stdout);
     scanf("%d %d",&N,&S);
     for (int i=0;i<N;i++)
         scanf("%d %d",&cost_need[i].first,&cost_need[i].second);
     long long res=solve();
     printf("%lld\n",res);
 
-    // fclose(stdin);fclose(stdout);
+    fclose(stdin);fclose(stdout);
     return 0;
 }
 
