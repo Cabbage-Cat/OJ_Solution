@@ -1,7 +1,7 @@
-#include <cstdio>
-#include <algorithm>
-#include <iostream>
+#include <bits/stdc++.h>
+
 #define MAX_N 10100
+typedef long long i64;
 
 using namespace std;
 void solve();
