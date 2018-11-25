@@ -4,20 +4,27 @@
 typedef long long i64;
 
 using namespace std;
-void solve();
+
+int W[MAX_N];
+int C[MAX_N];
+int dp[MAX_N];
+int N,V;
+void zeroOnePack(int *dp,int c,int w);
 
 int main()
 {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(0);
     freopen("F:\\github\\OJ_Solution\\POJ2393\\file.in","r",stdin);
     freopen("F:\\github\\OJ_Solution\\POJ2393\\file.out","w",stdout);
+
+    for (int i=1;i<=N;i++)
+        zeroOnePack(dp,C[i],W[i]);
 
     fclose(stdin);fclose(stdout);
     return 0;
 }
 
-void solve()
+void zeroOnePack(int *dp,int c,int w)
 {
-	
+    for (int v=V;v>=c;v--)
+        dp[v]=max(dp[v],dp[v-c]+w);
 }
