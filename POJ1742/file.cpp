@@ -45,7 +45,7 @@ void solve()
 
 	for (int i=1;i<=n;i++)
     {
-        for (int j=0;j<=V;j--)
+        for (int j=0;j<=V;j++)
         {
             if(dp[j]>=0)
                 dp[j]=M[i];
