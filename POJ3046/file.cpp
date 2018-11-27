@@ -1,8 +1,8 @@
-// #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 
-#include <iostream>
-#include <cstdio>
-#include <cstring>
+// #include <iostream>
+// #include <cstdio>
+// #include <cstring>
 
 #define MAX_N 100009
 #define MAX_ANT_FAMILY 1005
