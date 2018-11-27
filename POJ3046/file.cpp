@@ -19,8 +19,8 @@ int T,A,S,B;
 
 int main()
 {
-    // std::ios::sync_with_stdio(false);
-    // std::cin.tie(0);
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(0);
     freopen("C:\\Users\\admin\\Desktop\\OJ_Solution\\POJ3046\\file.in","r",stdin);
     freopen("C:\\Users\\admin\\Desktop\\OJ_Solution\\POJ3046\\file.out","w",stdout);
     int tmp;
