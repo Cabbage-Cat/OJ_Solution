@@ -1,38 +1,60 @@
-#include <iostream>
-#include <cstdio>
-#include <algorithm>
-#define MAX_N 5500
+#include <bits/stdc++.h>
 
-typedef std::pair<int,int> P;
-P stick[MAX_N];
-int t,N;
-bool cmp(P p1,P p2);
+#define MAX_N 5007
+typedef long long i64;
+typedef struct
+{
+    int length;
+    int weight;
+}S;
+
+S stick[MAX_N];
+int N;
+using namespace std;
+void solve();
+bool cmp(S &s1,S &s2);
+
 int main()
 {
-    scanf("%d ",&t);
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(0);
+    freopen("F:\\github\\OJ_Solution\\POJ1065\\file.in","r",stdin);
+    freopen("F:\\github\\OJ_Solution\\POJ1065\\file.out","w",stdout);
+    int t;
+    cin >> t;
     while (t-->0)
     {
-        scanf("%d",&N);
+        cin >> N;
         for (int i=0;i<N;i++)
-        {
-            scanf("%d",&stick[i].first);
-            scanf("%d",&stick[i].second);
-        }
-        std::sort(stick,stick+N,cmp);
+            cin >> stick[i].length >> stick[i].weight;
 
-        
+        sort(stick,stick+N,cmp);
+        // for (int i=0;i<N;i++)
+        //     cout << "(" << stick[i].length << " " << stick[i].weight<<") "<< endl;
+        solve();
+        // cout << endl;
     }
+    
+    fclose(stdin);fclose(stdout);
     return 0;
 }
 
-bool cmp(P p1,P p2)
+void solve()
 {
-    int tmp = p1.second - p2.second;
-    if (tmp == 0)
+	int res=1;
+    for (int i=1;i<N;i++)
     {
-        return p1.first - p2.first > 0;
+        if (stick[i].length<=stick[i-1].length && stick[i].weight<=stick[i-1].weight)
+            continue;
+        else
+            res+=1;
     }
-    else
-        return tmp>0;
+    cout << res << endl;
 }
 
+bool cmp(S &s1,S &s2)
+{
+    if (s1.length==s2.length)
+        return s1.weight > s2.weight;
+    return s1.length > s2.length;
+}
