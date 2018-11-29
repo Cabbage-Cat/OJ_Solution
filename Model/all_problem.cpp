@@ -10,8 +10,7 @@ int main()
 {
     std::ios::sync_with_stdio(false);
     std::cin.tie(0);
-    freopen("F:\\github\\OJ_Solution\\POJ2393\\file.in","r",stdin);
-    freopen("F:\\github\\OJ_Solution\\POJ2393\\file.out","w",stdout);
+
 
     fclose(stdin);fclose(stdout);
     return 0;
