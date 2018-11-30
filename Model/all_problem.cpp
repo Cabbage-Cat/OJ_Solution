@@ -4,7 +4,7 @@
 typedef long long i64;
 
 using namespace std;
-void solve();
+
 
 int main()
 {
@@ -12,11 +12,6 @@ int main()
     std::cin.tie(0);
 
 
-    fclose(stdin);fclose(stdout);
     return 0;
 }
 
-void solve()
-{
-	
-}
